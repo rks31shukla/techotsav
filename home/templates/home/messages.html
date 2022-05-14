@@ -1,0 +1,5 @@
+{% if messages %}
+    {% for i in messages %}
+    <div class="alert alert-success m-2" style="size: 1000;background-color: pink;margin-top: 50px;font-size: larger;" id ="msg" role="alert">{{i}}</div>
+    {% endfor %}
+{% endif %}

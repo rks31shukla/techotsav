@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<title>RDEC's First Tech-O-tsav</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<!-- <body onload="function Register(maximum,event){
+  var x = document.getElementById(event);
+  var y=x.innerHTML.substr(17,2);
+  if (parseInt(y) == maximum){
+    x.parentElement.parentElement.setAttribute('href','javascript:void(0)');
+  }
+};
+// console.log('jy');
+  Register(100,'bcount');
+  Register(50,'acount');
+  Register(90,'gcount');
+  Register(25,'pcount');
+"> -->
+<body onload="
+if(regCheck()==false){Reg(100,'bcount');
+  Reg(50,'acount');
+  Reg(90,'gcount');
+  Reg(25,'pcount');}
+">
+<div id="particles-js">
+</div>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    </div>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#Tech-O-tsav" class="w3-bar-item w3-button w3-padding-large">𝐓𝐞𝐜𝐡-𝐎-𝐭𝐬𝐚𝐯</a>
+    <a href="#Contact Us" style="float: right;"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact Us</a>
+    <a href="#tour" style="float: right;" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Competition</a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#Tech-O-tsav" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Tech-O-tsav</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Competition</a>
+  <a href="#Contact Us" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact Us</a>
+</div>
+{% include "home/messages.html" %}
+<!-- Page content -->
+<div class="w3-content" style="max-width:4000px;margin-top:30px">
+  <header class="w3-container w3-padding-32 w3-center w3-white" id="home">
+    <img src="{% static 'images/best.jpg' %}" alt="boy" class="w3-image" width="1198px" height="600px">
+  </header>
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="{% static 'images/slideshow_advance.jpeg' %}" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Advance Programming With DS</h3>
+      <p><b>You Need guts to be Here!!</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="{% static 'images/BGMI.jpg' %}" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Online Gaming</h3>
+      <p><b>A gaming Competition you won't forget.Test yourself Here!!</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="{% static 'images/slideshow_3.jpeg' %}" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Basic Coding with C</h3>
+      <p><b>Awwwwwwwwwww!!</b></p>
+    </div>
+  </div>
+
+  <!-- The Tech-O-tsav Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Tech-O-tsav">
+    <h2 class="w3-wide">The Tech-O-tsav</h2>
+    <p class="w3-opacity"><i>Who Love Coding</i></p>
+    <p class="w3-justify">Tech-O-tsav is the science and technology festival of RDEC, Ghaziabad, consisting of social initiatives and outreach programs. We have multiple options where you can participate with many prizes to win. As we are organazing tech fest where you can choose between the programming and gaming or you can participate in both as we call them pro in both coding and in gaming.
+    Unlock your potential. Extend your horizons Register today!! </p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <img src="https://scontent.fagr1-3.fna.fbcdn.net/v/t1.6435-9/157813780_4151133594919371_810095291320860909_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=e3f864&_nc_ohc=V0vMPauAjrEAX_2j1TC&_nc_ht=scontent.fagr1-3.fna&oh=00_AT_j4-o9iRKjU_rEnXmBT7Ulz9R2ELO3yZTVPwK098ecLw&oe=62975C24" class="w3-round w3-margin-bottom" alt="Random Name" width="123.29" height="123.29">
+        <h4>Dr. Sanjeev Sharma</h4>
+        <h6>(Director)</h6>
+      </div>
+      <div class="w3-third">
+        <img src="https://yt3.ggpht.com/ytc/AKedOLTx0npxk4mXiaKFQSKJWlnHuQbLRLXzgmJsnj7j=s900-c-k-c0x00ffffff-no-rj" class="w3-round w3-margin-bottom" alt="Random Name" width="123.29" height="123.29">
+        <h4>Professor Mohd. Vakil</h4>
+        <h6>(Dean Academics)</h6>
+      </div>
+      <div class="w3-third">
+        <img src="https://rdecpwa.firebaseapp.com/images/dept/hodcs.jpg" class="w3-round w3-margin-bottom" alt="Random Name" width="123.29" height="123.29">
+        <h4>Dr. Jaideep Kumar</h4>
+        <h6>(HOD CSE Department)</h6>
+      </div>
+    </div>
+  </div>
+
+<!-- Team Section -->
+<div class="w3-black" id="tour">
+<div class="w3-container" style="padding:128px 16px" id="team">
+    <h3 class="w3-center">COMPETITION DATES</h3>
+    <p class="w3-center w3-large">Announcing soon!!!</p>
+    <div class="w3-row-padding w3-padding-32" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="{% static 'images/Basic 2.jpg' %}" alt="John" style="width:100%">
+          <div class="w3-container w3-white">                       <h3>Basic Programming</h3>
+            <p>Basic Programming is for the begineers. Here you can test your basic skill and you'll win something. Isn't great!!</p>
+            <a  href="{% url 'registerbasic' %}"><button id="regBtn1" class="w3-button w3-black w3-margin-bottom" >&#128073;<span id = 'bcount' class="w3-tag w3-red w3-margin-left">TOTAL REGISTERED:{{bcount}} of 100</span></button></a>
+          </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="{% static 'images/advance 2.jpg' %}" alt="Jane" style="width:100%">
+          <div class="w3-container w3-white">
+               <h3>Advanced Programming</h3>
+            <p>Real Skill are tested here with concept of DSA. Things get intense here!! little tough to crack but more in prize
+            </p>
+            <a  href="{% url 'registeradvance' %}"><button id="regBtn2" class="w3-button w3-black w3-margin-bottom" >&#128073;<span id = "acount" class="w3-tag w3-red w3-margin-left">TOTAL REGISTERED:{{acount}} of 50</span></button></a>
+          </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+          <img src="{% static 'images/bgmi 2.jpg' %}" alt="Project" style="width:100%">
+          <div class="w3-container w3-white">            <h3>Online Gaming</h3>
+            <p>Even if you are NOOB in programming. Doesn't mean you are mean in Online gaming. Winners Register here!!</p>
+            <a  href="{% url 'registergaming' %}"><button id="regBtn3" class="w3-button w3-black w3-margin-bottom" >&#128073;<span id = "gcount" class="w3-tag w3-red w3-margin-left">TOTAL REGISTERED:{{gcount}} of 90</span></button></a>
+          </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+                <img src="{% static 'images/project.jpeg' %}" alt="Project" style="width:100%">
+          <div class="w3-container w3-white">
+        <h3>Project</h3>
+            <p>Real sweat Real skills.. Thing get heated here!! You will get time to prepare and present project. Some intance action.</p>
+            <a  href="{% url 'registerproject' %}"><button id="regBtn4" class="w3-button w3-black w3-margin-bottom" >&#128073;<span id = "pcount" class="w3-tag w3-red w3-margin-left">TOTAL REGISTERED:{{pcount}} of 25</span></button></a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <!-- The Contact Us Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="Contact Us">
+    <h2 class="w3-wide w3-center">Contact Us</h2>
+    <p class="w3-opacity w3-center"><i>Suggestions?  Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Delhi-Meerut Road, Duhai, Ghaziabad<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: 0120-2679301<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: info@rdec.in<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="" method = "post">
+          {% csrf_token %}
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <input class="w3-button w3-black w3-section w3-right" name ="contactus" type="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="{% static 'images/flag.jpg' %}" width="100%">
+<!-- ADD IMAGE AT THE VERY BOTTOM ON ABOVE -->
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p>Made With Love!!</p>
+  
+</footer>
+</body>
+<script>
+function regCheck(){
+  d = new Date();
+  date = d.getDate();
+  hr = d.getHours();
+  // console.log(date,hr);
+  if(date == 15 && hr != 10){
+    for(let i = 1;i<5;i++){
+      // console.log("regBtn"+i);
+      tg = document.getElementById("regBtn"+i);
+      e = tg.parentElement;
+      e.innerHTML = "Registration starts on 15th May 10 am";
+      e.setAttribute('class',"w3-button w3-black w3-margin");
+      e.setAttribute("href","javascript:void(0)");
+    }
+    return true;
+  }
+  return false;
+}
+
+function Reg(maximum,event){
+  var x = document.getElementById(event);
+  var y=x.innerHTML.substr(17,2);
+  if (parseInt(y) == maximum){
+    console.log(x.parentElement.parentElement);
+    e=x.parentElement.parentElement;
+    e.innerHTML = "Registration Completed!";
+    e.setAttribute('class',"w3-button w3-black w3-margin");
+    e.setAttribute('href','javascript:void(0)');
+  }
+};
+
+  function Register(maximum,event){
+    var x = document.getElementById(event);
+    var y=x.innerHTML.substr(17,2);
+
+    if (parseInt(y) == maximum){
+      x.parentElement.parentElement.setAttribute("href","javascript:void(0)");
+      alert("Registrations are Completed!");
+    }
+  }
+setTimeout(function(){
+    if ($('msg').length > 0) {
+      $('#msg').remove();
+    }
+  },5)
+
+// Automatic Slideshow - change image every 10 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
