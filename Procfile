@@ -1,3 +1,3 @@
 web: gunicorn techotsav.wsgi --log-file -
-release: manage.py makemigrations
-release: manage.py migrate
+release: python manage.py makemigrations
+release: python manage.py migrate
