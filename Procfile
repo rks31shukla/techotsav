@@ -1,1 +1,1 @@
-web: gunicorn techotsav.wsgi.applications --log-file -
+web: gunicorn techotsav.wsgi --log-file -
