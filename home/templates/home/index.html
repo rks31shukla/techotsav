@@ -114,7 +114,10 @@ if(regCheck()==false){Reg(100,'bcount');
 <div class="w3-black" id="tour">
 <div class="w3-container" style="padding:128px 16px" id="team">
     <h3 class="w3-center">COMPETITION DATES</h3>
-    <p class="w3-center w3-large">Announcing soon!!!</p>
+    <h6 class="w3-center w3-large">BASIC PROGRAMMING on 27th May 2022(Friday)</h6>
+    <h6 class="w3-center w3-large">ADVANCE PROGRAMMING 28th May 2022 (Saturday)</h6>
+    <h6 class="w3-center w3-large">ONLINE GAMING on 27th May 2022 (Friday)<h6>
+    <h6 class="w3-center w3-large">PROJECT on 31st May 2022 (Tuesday) </h6>
     <div class="w3-row-padding w3-padding-32" style="margin-top:64px">
       <div class="w3-col l3 m6 w3-margin-bottom">
           <img src="{% static 'images/Basic 2.jpg' %}" alt="John" style="width:100%">
@@ -197,12 +200,12 @@ function regCheck(){
   date = d.getDate();
   hr = d.getHours();
   // console.log(date,hr);
-  if(date == 15 && hr != 10){
+  if(date != 22 && hr != 10){
     for(let i = 1;i<5;i++){
       // console.log("regBtn"+i);
       tg = document.getElementById("regBtn"+i);
       e = tg.parentElement;
-      e.innerHTML = "Registration starts on 15th May 10 am";
+      e.innerHTML = "Opens Shortly!";
       e.setAttribute('class',"w3-button w3-black w3-margin");
       e.setAttribute("href","javascript:void(0)");
     }
