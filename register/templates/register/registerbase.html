@@ -144,7 +144,7 @@
                 <input type="Number" pattern="[0-9]{13}" min = "1000000000000" max = "9999999999999" placeholder="Roll Number" name = "rollnumber" required = "" class="form-control">
             </div>
             <div class="form-wrapper">
-                <select  name="year" id="selyear" class="form-control" required>
+                <select  name="year" onchange="yearChange(this.id,'sec');" id="selyear" class="form-control" required>
                     <option   value="" disabled selected>Year</option>
                     <option value="1"> First Year</option>
                     <option value="2">Second Year</option>
@@ -154,7 +154,7 @@
             </div>
 
             <div class="form-wrapper">
-                <select name="branch" id="selbranch" class="form-control" required>
+                <select name="branch" onchange="branchChange(this.id,'sec');" id="selbranch" class="form-control" required>
                     <option value="" disabled selected>Branch/Course</option>
                     <option value="CSE-AI&ML">CSE-AI&ML</option>
                     <option value="CSE-DS">CSE-DS</option>
@@ -162,6 +162,7 @@
                     <option value="CSE" >CSE</option>
                     <option value="IT" >IT</option>
                     <option value="ECE" >ECE</option>
+                    <option value="CIVIL" >CIVIL</option>
                     <option value="MECHANICAL" >MECHANICAL</option>
                     <option value="MCA" >MCA</option>
                 </select>
@@ -169,7 +170,7 @@
             <div class="form-wrapper">
                 <select name="sec" id="sec" class="form-control" required>
                     <option value="" disabled selected>Section</option>
-                    <option value="A">A</option>
+                    <!-- <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C" >C</option>
                     <option value="D" >D</option>
@@ -180,7 +181,7 @@
                     <option value="E1" >E1</option>
                     <option value="E2" >E2</option>
                     <option value="E3" >E3</option>
-                    <option value="E4" >E4</option>
+                    <option value="E4" >E4</option> -->
                 </select>
             </div>
             <div class="form-wrapper">
@@ -211,13 +212,51 @@
         </form>
         </div>
     </div>
+    <script>
+        function yearChange(s1,s2){
+            var s1 =document.getElementById(s1);
+            var s2 =document.getElementById(s2);
+            s2.innerHTML = "";
 
+            if(s1.value=='1'){
+                var optionArray = ['E1','E2','E3','E4','M1','M2','M3','M4'];
+            }
+            else{
+                var optionArray = ['A','B','C','D'];
+            }
+            for(var i = 0 ;i< optionArray.length;i++){
+                // console.log(optionArray[i])
+                var newOption = document.createElement("option");
+                newOption.value=optionArray[i];
+                newOption.innerHTML=optionArray[i];
+                s2.options.add(newOption);
+            }
+        }
+        function branchChange(s1,s2){
+            var s1 =document.getElementById(s1);
+            var s2 =document.getElementById(s2);
+            s2.innerHTML = "";
+            // console.log(s1.value,['ECE','CIVIL','MECHANICAL','MCA'].includes(s1.value));
+            if(['ECE','CIVIL','MECHANICAL','MCA'].includes(s1.value)){
+                // var optionArray = '';
+                var newOption = document.createElement("option");
+                newOption.value='A';
+                newOption.innerHTML='A';
+                s2.options.add(newOption);
+            }
+            else{
+                var optionArray = ['A','B','C','D'];
+            
+            for(var i = 0 ;i< optionArray.length;i++){
+                // console.log(optionArray[i])
+                var newOption = document.createElement("option");
+                newOption.value=optionArray[i];
+                newOption.innerHTML=optionArray[i];
+                s2.options.add(newOption);
+            }
+        }
+        }
+    
+    </script>
 </body>
-<script>
-    function yearCheck(){
-        var a = document.getElementById('selyear');
-        var b = a.firstElementChild.text;
-        console.log(a,b);
-    }
-</script>
 </html>
