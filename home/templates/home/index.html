@@ -12,25 +12,13 @@
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
-<!-- <body onload="function Register(maximum,event){
-  var x = document.getElementById(event);
-  var y=x.innerHTML.substr(17,2);
-  if (parseInt(y) == maximum){
-    x.parentElement.parentElement.setAttribute('href','javascript:void(0)');
-  }
-};
-// console.log('jy');
+<body onload="
   Register(100,'bcount');
   Register(50,'acount');
   Register(90,'gcount');
   Register(25,'pcount');
-"> -->
-<body onload="
-if(regCheck()==false){Reg(100,'bcount');
-  Reg(50,'acount');
-  Reg(90,'gcount');
-  Reg(25,'pcount');}
 ">
+<body>
 <div id="particles-js">
 </div>
 
@@ -195,26 +183,26 @@ if(regCheck()==false){Reg(100,'bcount');
 </footer>
 </body>
 <script>
-function regCheck(){
-  d = new Date();
-  date = d.getDate();
-  hr = d.getHours();
-  console.log(date,hr);
-  if(date != 22 && hr != 10){
-    for(let i = 1;i<5;i++){
-      console.log("regBtn"+i);
-      tg = document.getElementById("regBtn"+i);
-      e = tg.parentElement;
-      e.innerHTML = "Opens Shortly!";
-      e.setAttribute('class',"w3-button w3-black w3-margin");
-      e.setAttribute("href","javascript:void(0)");
-    }
-    return true;
-  }
-  return false;
-}
+// function regCheck(){
+//   d = new Date();
+//   date = d.getDate();
+//   hr = d.getHours();
+//   console.log(date,hr);
+//   if(date != 22 && hr != 10){
+//     for(let i = 1;i<5;i++){
+//       console.log("regBtn"+i);
+//       tg = document.getElementById("regBtn"+i);
+//       e = tg.parentElement;
+//       e.innerHTML = "Opens Shortly!";
+//       e.setAttribute('class',"w3-button w3-black w3-margin");
+//       e.setAttribute("href","javascript:void(0)");
+//     }
+//     return true;
+//   }
+//   return false;
+// }
 
-function Reg(maximum,event){
+function Register(maximum,event){
   var x = document.getElementById(event);
   var y=x.innerHTML.substr(17,2);
   if (parseInt(y) == maximum){
@@ -226,15 +214,15 @@ function Reg(maximum,event){
   }
 };
 
-  function Register(maximum,event){
-    var x = document.getElementById(event);
-    var y=x.innerHTML.substr(17,2);
+  // function Reg(maximum,event){
+  //   var x = document.getElementById(event);
+  //   var y=x.innerHTML.substr(17,2);
 
-    if (parseInt(y) == maximum){
-      x.parentElement.parentElement.setAttribute("href","javascript:void(0)");
-      alert("Registrations are Completed!");
-    }
-  }
+  //   if (parseInt(y) == maximum){
+  //     x.parentElement.parentElement.setAttribute("href","javascript:void(0)");
+  //     alert("Registrations are Completed!");
+  //   }
+  // }
 // setTimeout(function(){
 //     if ($('msg').length > 0) {
 //       $('#msg').remove();
