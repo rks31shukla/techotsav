@@ -30,17 +30,15 @@ def submit(request):
         roll = request.POST["rollnumber"]
         event = request.POST['event']
         dbroll = Registrations.objects.filter(Roll=int(roll)).filter(Contest=event)
-        # p=dbroll.get()
-        # print(dbroll)
-        # print(type(p))
+        d = Registrations.objects.filter(Contest =event).count()
+        dic={'Project making':25,'Online gaming':90,'Advance programming':50,'Basic programming':100}
+        # print(d,dic[event],event)
+        if d >= dic[event]:
+            print(d >= dic[event])
+            messages.success(request, "Registrations are completed!")
+            return redirect("/")
+        # print(event)
         if(len(roll) != 13) or (int(roll[3:6]) not in (783, 231)) or (int(roll[0]) not in (1, 2, 9)) or (int(roll[1])not in (0, 1)):
-            # print(int(roll[3:6]))
-            # print(int(roll[0]))
-            # print(int(roll[3:6]) not in (783, 231))
-            # print(len(roll) != 13)
-            # print(int(roll[1])not in (0, 1))
-            # print(int(roll[0]) not in (1, 2, 9))
-            # print(int(roll[1]))
             messages.success(request, "Wrong Roll Number!")
             return redirect("/")
         if (dbroll.exists()):
